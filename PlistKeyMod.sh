@@ -1,20 +1,6 @@
 #!/bin/bash
-# Returns plist value.
-
-# Input is $1 and $2, where $1 is the file to read from and $2 is the key to return the value of.
-
-# Exit codes
-# 1. No file supplied.
-# 2. Specified key was not found in file.
-# 3. File supplied does not exist.
-# 4. Unknown mode supplied.
-# 5. User supplied no input.
-# 6. File supplied is not plist.
-# 7. Unknown argument supplied.
-
-# Modes read and write.
-
-# TODO: replace with printErrMsg($1). Add the following instead of exitw: printErrMsg "exit code" && return "exit code"
+# License: The MIT License (MIT)
+# Author Zuzzuc https://github.com/Zuzzuc/
 
 if [ "$(caller 0)" != "" ];then
 	exit_mode="return"
