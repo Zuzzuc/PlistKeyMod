@@ -5,10 +5,10 @@ PlistKeyMod.sh is used to extract and modify the values of specific keys in a pl
 # Usage
 
 ## Examples
-`/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName"`
+`/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName"`<br>
 This will return the value of the key "CFBundleName".'<br>
 <br>
-`/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName" -m="write" -v="Example"`
+`/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName" -m="write" -v="Example"`<br>
 This will change the value of the key "CFBundleName" to "Example"<br>
 ## Arguments
 
