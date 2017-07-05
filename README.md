@@ -5,15 +5,7 @@ PlistKeyMod can either be used to retrieve or set a value of a key in a plist fi
 # Usage
 Inline `code` has `back-ticks around` it.
 ## Examples
-<br>
-Example: `/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName"`
-This will return the value of the key "CFBundleName".'
 Inline `code` has `back-ticks around` it.
-<br>
-Example: `/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName" -m="write" -v="Example"`
-This will change the value of the key "CFBundleName" to "Example"
-<br>
-
 ## Arguments
 Inline `code` has `back-ticks around` it.
 
