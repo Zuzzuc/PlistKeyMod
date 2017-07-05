@@ -3,7 +3,7 @@
 PlistKeyMod.sh is used to extract and modify the values of specific keys in a plist file.
 
 # Usage
-Inline `code` has `back-ticks around` it.
+
 ## Examples
 `/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName"`
 This will return the value of the key "CFBundleName".'<br>
