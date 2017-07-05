@@ -9,8 +9,7 @@ Inline `code` has `back-ticks around` it.
 This will return the value of the key "CFBundleName".'<br><br>
 <br>
 `/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName" -m="write" -v="Example"`
-This will change the value of the key "CFBundleName" to "Example"<br><br>
-<br>
+This will change the value of the key "CFBundleName" to "Example"<br>
 ## Arguments
 Inline `code` has `back-ticks around` it.
 
