@@ -35,7 +35,7 @@ Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=read`
 
 ### Value
 #### -v or --value
-#### This option will default to 'read' if not set.
+#### This option is REQUIRED if mode is set to 'write'
 <br>This option chooses what value to assign a key if mode is set to 'write'.<br><br>
 Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=write -value=StringToAssign`
 <br><br><br>
