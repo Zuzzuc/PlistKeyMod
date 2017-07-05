@@ -17,7 +17,7 @@ Example: `/PlistKeyMod.sh -f=example.plist`
 #### Requires a parameter
 #### This option is REQUIRED for this script to work.
 <br>This option chooses what key to perform actions on.<br><br>
-Example: `/PlistKeyMod.sh -f=/PlistKeyMod.sh -f=example.plist-k=CFBundleName`
+Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName`
 <br><br><br>
 
 ### Mode
@@ -29,13 +29,13 @@ Avaliable modes: 'read' and 'write'
 <br><br>
 If the mode is 'write', use -v to choose what to write.
 <br><br>
-Example: `/PlistKeyMod.sh -f=/PlistKeyMod.sh -f=example.plist-k=CFBundleName -m=read`
+Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=read`
 <br><br><br>
 
 
 ### Value
 #### -v or --value
 #### This option will default to 'read' if not set.
-<br>This option chooses what key to perform actions on.<br><br>
-Example: `/PlistKeyMod.sh -f=/PlistKeyMod.sh -f=example.plist-k=CFBundleName`
+<br>This option chooses what value to assign a key if mode is set to 'write'.<br><br>
+Example: `/PlistKeyMod.sh -f=/PlistKeyMod.sh -f=example.plist -k=CFBundleName -`
 <br><br><br>
