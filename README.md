@@ -6,10 +6,10 @@ PlistKeyMod can either be used to retrieve or set a value of a key in a plist fi
 
 ## Examples
 <br>
-aa `/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName"`
+Example: `/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName"`
 This will return the value of the key "CFBundleName".
 <br>
-aa `/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName" -m="write" -v="Example"`
+Example: `/PlistKeyMod.sh -f="$HOME/Desktop/example.plist" -k="CFBundleName" -m="write" -v="Example"`
 This will change the value of the key "CFBundleName" to "Example"
 <br>
 
