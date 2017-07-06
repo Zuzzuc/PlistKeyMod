@@ -50,6 +50,7 @@ Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=write -value=Strin
 
 
 ## Exit codes
+0: Success
 1: No file supplied.<br>
 2: Specified key was not found in the file.<br>
 3: Specified file does not exist.<br>
