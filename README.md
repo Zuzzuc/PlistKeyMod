@@ -47,3 +47,12 @@ Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=read`
 <br>This option chooses what value to assign a key if mode is set to 'write'.<br><br>
 Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=write -value=StringToAssign`
 <br><br><br>
+
+
+## Exit codes
+1: No file supplied.<br>
+2: Specified key was not found in the file.<br>
+3: Specified file does not exist.<br>
+4: Unsupported mode recived.<br>
+5: Specified file is not plist.<br>
+6: Unknown argument recived.<br>
