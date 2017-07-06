@@ -32,10 +32,10 @@ catch_err(){
    				echo "($1) File recived is not a plist."
    				;;
    			6)
-   				echo "($1) File '$f' does not exist."
-   				;;
-   			7)
    				echo "Unknown argument supplied. Failing arg is '$3'"
+   				;;
+   			*)
+   				echo "Unknown error code. No default message to display."
    			;;
    		esac
    	else
@@ -64,7 +64,7 @@ if [ "$*" != "" ];then
    				file="$f"
    			else
    				# File is not a plist.
-   				catch_err "6" && $exit_mode $error_code
+   				catch_err "5" && $exit_mode $error_code
    			fi
    			;;
    		-k=*|--key=*)
@@ -82,7 +82,7 @@ if [ "$*" != "" ];then
    			;;
    		*)
    			# Unknown argument.
-   			catch_err "7" "" "$i" && $exit_mode $error_code
+   			catch_err "6" "" "$i" && $exit_mode $error_code
    			;;
 		esac
 	done
