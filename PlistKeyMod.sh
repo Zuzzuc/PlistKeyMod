@@ -9,8 +9,7 @@ else
 fi
 
 print_usage(){
-	# TODO: Write.
-	:
+	echo -e "Usage is PlistKeyMod.sh -[fkmvh]=[value]"
 }
 
 catch_err(){
