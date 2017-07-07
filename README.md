@@ -1,6 +1,6 @@
 # PlistKeyMod
 
-PlistKeyMod.sh is used to extract and modify the values of specific keys in a plist file.
+PlistKeyMod.sh is used to both extract and modify the values of specific keys in a plist file.
 
 # Usage
 
