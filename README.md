@@ -50,6 +50,7 @@ Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=write -value=Strin
 
 ### Output
 #### -o or --output
+#### Requires a parameter
 #### This option will default to 'auto' if not supplied.
 <br>This option chooses where to send the result.<br><br>
 There are three modes that the output option can handle. These are 'auto', 'STDIN', and 'filepath'<br><br>
