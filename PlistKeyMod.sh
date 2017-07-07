@@ -2,8 +2,6 @@
 # License: The MIT License (MIT)
 # Author Zuzzuc https://github.com/Zuzzuc/
 
-# TODO: Fix output handling
-
 if [ "$(caller 0)" != "" ];then
 	exit_mode="return"
 else
