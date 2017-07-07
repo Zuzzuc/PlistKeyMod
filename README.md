@@ -61,7 +61,7 @@ Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=read -o=/tmp/resul
 This will send the value of the key 'CFBundleName' to a file in /tmp/result.txt<br><br>
 
 ## Exit codes
-0: Success
+0: Success<br>
 1: No file supplied.<br>
 2: Specified key was not found in the file.<br>
 3: Specified file does not exist.<br>
