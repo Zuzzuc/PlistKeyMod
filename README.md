@@ -48,6 +48,17 @@ Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=read`
 Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=write -value=StringToAssign`
 <br><br><br>
 
+### Output
+#### -o or --output
+#### This option will default to 'auto' if not supplied.
+<br>This option chooses where to send the result.<br><br>
+There are three modes that the output option can handle. These are 'auto', 'STDIN', and 'filepath'<br><br>
+The option 'auto' will print the result to stdin if the mode is read and will edit the file if the mode is write. The option 'STDIN' will cause any result to be printed to stdin, even if the mode is write. The last option is dynamic. Any absolute filepath ented will cause the script to print all result, except error messages, to the supplied path.<br>
+Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=write -value=StringToAssign -o=STDIN`<br>
+This will cause the whole plist file to be returened to stdin, but with changes made.<br><br>
+Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=read -o=/tmp/result.txt`<br>
+This will send the value of the key 'CFBundleName' to a file in /tmp/result.txt<br><br>
+<br><br><br>
 
 ## Exit codes
 0: Success
