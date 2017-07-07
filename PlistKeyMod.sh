@@ -2,6 +2,8 @@
 # License: The MIT License (MIT)
 # Author Zuzzuc https://github.com/Zuzzuc/
 
+# TODO: Fix output handling
+
 if [ "$(caller 0)" != "" ];then
 	exit_mode="return"
 else
@@ -49,6 +51,7 @@ file=""
 mode="read"
 key=""
 value=""
+output="auto" # Default var.
 
 
 # Handle input
@@ -76,6 +79,9 @@ if [ "$*" != "" ];then
    		-v=*|--value=*)
    			value="${i#*=}"
    			;;
+   		-o=*|--output=*)
+   		 	output="${i#*=}"
+   			;;
    		-h|--help)
    			# Print help.
    			print_usage
@@ -88,18 +94,31 @@ if [ "$*" != "" ];then
 	done
 else
 	# User sent no arguments.
-	catch_err "5" && $exit_mode $error_code
+	catch_err "1" && $exit_mode $error_code
+fi
+
+if [ "$output" != "STDIN" ] && [ "$output" != "auto" ];then
+	output="${output/\\/}" && output="${output%${output##*[![:space:]]}}"
+	mkdir -p "${output%/*}"
 fi
 
 if [ "$mode" == "read" ] || [ -z $mode ];then
 	if [ ! -z $file ];then
 		file="${file/\\/}" && file="${file%${file##*[![:space:]]}}"
 		if [ -f "$file" ];then
-			r="$(awk "/$key/{getline; print}" "$file")" && r="${r#"${r%%[![:blank:]]*}"}"
-			if [ "$r" != "" ];then
-				echo "$r"
+		r="$(awk "/$key/{getline; print}" "$file")" && r="${r#"${r%%[![:blank:]]*}"}"
+			if [ "$output" == "auto" ] || [ "$output" == "STDIN" ];then
+				if [ "$r" != "" ];then
+					echo "$r"
+				else
+					catch_err "2" && $exit_mode $error_code
+				fi
 			else
-				catch_err "2" && $exit_mode $error_code
+				if [ "$r" != "" ];then
+					echo "$r" > "$output"
+				else
+					catch_err "2" && $exit_mode $error_code
+				fi
 			fi
 		else
 			# File does not exist
@@ -114,7 +133,11 @@ elif [ "$mode" == "write" ];then
 		linenr="$((${line/:*/}+1))"
 		line="${line/*:/}"
 		
-		sed -i '' -e "$linenr s%>.*</%>$value</%" "$file"
+		if [ "$output" == "auto" ] && [ "$output" != "STDIN" ];then
+			sed -i '' -e "$linenr s%>.*</%>$value</%" "$file"
+		else
+			sed -e "$linenr s%>.*</%>$value</%" "$file"
+		fi
 	else
 		# Didnt find key.
 		catch_err "2" && $exit_mode $error_code
