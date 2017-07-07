@@ -58,7 +58,6 @@ Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=write -value=Strin
 This will cause the whole plist file to be returened to stdin, but with changes made.<br><br>
 Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName -m=read -o=/tmp/result.txt`<br>
 This will send the value of the key 'CFBundleName' to a file in /tmp/result.txt<br><br>
-<br><br><br>
 
 ## Exit codes
 0: Success
