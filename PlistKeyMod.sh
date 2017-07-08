@@ -9,7 +9,7 @@ else
 fi
 
 print_usage(){
-	echo -e "Usage is PlistKeyMod.sh -[fkmvh]=[value]"
+	echo -e "Usage is PlistKeyMod.sh -[fkmv]=[value] -[h]"
 }
 
 catch_err(){
@@ -44,12 +44,13 @@ catch_err(){
    	error_code=$1
 }
 
-# Setup
+# Setup default vars
+
 file=""
 mode="read"
 key=""
 value=""
-output="auto" # Default var.
+output="auto"
 
 
 # Handle input
