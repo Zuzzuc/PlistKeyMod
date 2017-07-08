@@ -33,7 +33,7 @@ Example: `/PlistKeyMod.sh -f=example.plist -k=CFBundleName`
 #### Requires a parameter
 #### This option will default to 'read' if not set.
 <br>This option chooses what mode to use when performing actions on a file.<br>
-Avaliable modes: 'read' and 'write'
+Available modes: 'read' and 'write'
 <br><br>
 If the mode is 'write', use -v to choose what to write.
 <br><br>
