@@ -57,8 +57,8 @@ if [ "$*" != "" ];then
 	for i in "$@";do					
 		case "$i" in		
 		"$0")
-    		continue
-    		;;
+			continue
+			;;
 		-f=*|--file=*)
    			f="${i#*=}" && f="${f/\\/}" && f="${f%${f##*[![:space:]]}}"
    			if [ "${f:${#f}-6}" == ".plist" ];then
