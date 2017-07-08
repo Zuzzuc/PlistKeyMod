@@ -59,7 +59,7 @@ if [ "$*" != "" ];then
 		"$0")
     		continue
     		;;
-    	-f=*|--file=*)
+		-f=*|--file=*)
    			f="${i#*=}" && f="${f/\\/}" && f="${f%${f##*[![:space:]]}}"
    			if [ "${f:${#f}-6}" == ".plist" ];then
    				file="$f"
