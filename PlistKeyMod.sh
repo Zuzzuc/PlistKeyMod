@@ -14,7 +14,7 @@ print_usage(){
 
 catch_err(){
 	# Input is $1, where $1 is the error code description to display.
-	if [ -z $2 ];then
+	if [ -z "$2" ];then
 		case "$1" in
    		 	1)
    				echo "($1) No file supplied."
@@ -101,8 +101,8 @@ if [ "$output" != "STDIN" ] && [ "$output" != "auto" ];then
 	mkdir -p "${output%/*}"
 fi
 
-if [ "$mode" == "read" ] || [ -z $mode ];then
-	if [ ! -z $file ];then
+if [ "$mode" == "read" ] || [ -z "$mode" ];then
+	if [ ! -z "$file" ];then
 		file="${file/\\/}" && file="${file%${file##*[![:space:]]}}"
 		if [ -f "$file" ];then
 		r="$(awk "/$key/{getline; print}" "$file")" && r="${r#"${r%%[![:blank:]]*}"}"
